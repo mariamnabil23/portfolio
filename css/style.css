@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: rgb(17, 134, 170);
+    --second-color: black;
+
+}
+body{
+    color: white;
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--second-color);
+    position: fixed;     /*يفضل ثانبت معايا وانا بسكرول ف الصفحة*/
+    z-index: 100;       /*الاولية هو هيظهر فوق كل العناصر*/
+    padding: 10px 100px;
+    box-shadow: 0 -5px 20px white;
+}
+.logo{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.navigation a{
+    padding-left: 30px;
+    color: var(--main-color);
+    font-size: 18px;
+
+}
+.navigation a:hover{
+    color: currentColor;
+}
+
+/*main section*/
+section{
+    padding: 200px 100px;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url(../images/lab.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;               /*عشان هي في الاصل inline مقدرش اعلمها مارجن*/
+    margin: 20px 0;
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: 600;
+}
+.main h3 {
+    color: var(--second-color);
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+.main .button{
+    display: inline-block;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    padding: 10px 30px;
+    border-radius: 20px;
+    
+    font-size: 15px;
+    transition: 0.7s ease;
+}
+.main .button:hover{
+    transform: scale(1.1);
+    letter-spacing: 2px;
+    background-color: rgb(26, 164, 206);
+    color: white;
+}
+.main .icons{
+    margin-top: 40px;
+}
+.main .icons i{
+    margin-right: 20px;
+    color: white;
+    font-size: 16px;
+}
+.mode{
+    margin-top: 40px;
+}
+.mode button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/*services*/
+
+.title{
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+    text-shadow: 3px 3px gray;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    margin-right: 40px;
+    background-color: var(--second-color);
+    box-shadow: 3px 3px 20px white;
+    width: 340px;
+    height: 240px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px ;
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.2);
+}
+.card .icon , .con-card1 .icon ,.con-card2 .icon{
+    text-align: center;
+    font-size: 60px;
+    color: var(--main-color);
+}
+.card .info h3 , .con-card1 .info h3 , .con-card2 .info h3{
+    text-align: center;
+    margin: 15px 0;
+    color: var(--main-color);
+}
+.card .info p , .con-card1 .info p , .con-card2 .info p{
+    text-align: center;
+    line-height: 18px;
+}
+
+/*projects*/
+.pro-card{
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    min-height: 220px;
+    width: 320px;
+    margin: 20px 30px 40px 30px;
+    padding: 3px;
+    transition: 0.7s ease;
+    
+}
+.pro-card:hover{
+   
+    transform: rotate(4deg) scale(1.1);
+}
+.pro-card:hover img{
+    opacity: 0.7;
+}
+.pro-card img{
+    width: 100%;
+}
+.pro-card .pro-info{
+    padding: 3px;
+}
+.pro-card .pro-info p{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.pro-card .pro-info strong{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.pro-card .pro-info strong span{
+    font-size: 14px;
+    text-transform: uppercase;
+    
+}
+.pro-card .pro-info strong a{
+    color: var(--main-color);
+}
+.pro-card .pro-info strong a:hover{
+    color: rgb(255, 85, 85);
+}
+/*contact*/
+.con-card1 , .con-card2{
+    background-color: var(--second-color);
+    box-shadow: 3px 3px 20px white;
+    width: 340px;
+    height: 240px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px ;
+}
+.con-card1{
+    transform: rotate(7deg);
+}
+.con-card2{
+    transform: rotate(-7deg);
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    
+}
+footer .content{
+    display: flex;
+    justify-content: space-between;
+}
+footer p span{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: bold
+}
+footer .icons i{
+    margin-left: 10px;
+    color: var(--main-color);
+}
